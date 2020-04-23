@@ -1,3 +1,5 @@
+/* GLOBAL PAGE STYLE */
+
 html {
   box-sizing: border-box;
 }
@@ -21,6 +23,25 @@ img {
 .container {
   width: 1110px;
   margin: 0 auto;
+}
+
+/* HIDEN H1 */
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* NAVIGATION STYLE */
@@ -140,11 +161,13 @@ h2::after {
   margin-top: 39px;
 }
 
-.products p:hover {
-  background-color: #7fd9c7;
-}
-.products h3:hover {
+/* HOVER PRODUCTS */
+
+.products li:hover h3 {
   background-color: #1abc9c;
+}
+.products li:hover p {
+  background-color: #7fd9c7;
 }
 
 /* NEWS STYLE */
@@ -186,7 +209,7 @@ h4::after {
   margin-top: 14px;
 }
 
-p {
+.news p {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   color: rgb(85, 82, 82);
@@ -196,14 +219,17 @@ p {
   word-spacing: -0.9px;
 }
 
-button {
+.news a {
+  display: inline-block;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   color: rgb(255, 255, 255);
   line-height: 1.625;
-  text-align: center;
   border-radius: 3px;
   background-color: rgb(78, 198, 171);
-  padding: 13px 40px;
-  border: 0px;
+  text-decoration: none;
+  width: 159px;
+  height: 51px;
+  text-align: center;
+  line-height: 51px;
 }
